@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="de">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Body-Mass-Index Berechnenn</title>
+  </head>
+
+  <body>
+    <h1>Body-Mass-Index</h1>
+    <p>Der Body-Mass-Index ist eine Maßzahl für die Bewertung des Körpergewichts eines Menschen in Relation zu seiner Körpergröße. Sie wurde 1832 von Adolphe Quetelet sowie nach dem Ersten Weltkrieg von Ignaz Kaup entwickelt.</p>
+    <p>Der BMI bezieht die Körper-Masse (englisch mass, umgangssprachlich Gewicht) auf das Quadrat der Körpergröße. Der Wert „Quadrat der Körpergröße“ steht in keinem definierten Zusammenhang mit der Körperoberfläche. Der BMI ist lediglich ein grober Richtwert, da er weder Statur und Geschlecht noch die individuelle Zusammensetzung der Körpermasse aus Fett- und Muskelgewebe eines Menschen berücksichtigt.</p>
+
+    <p>Berechnen sie ihren BMI, indem sie folgende Felder ausfüllen</p>
+        
+    <form name= "formBMI">
+      <label for="gewicht">Gewicht in (kg):</label>
+      <input id="gewicht" type="number" name="gewicht">
+      
+
+      <p>
+      <label for="groesse">Grösse in (cm):</label>
+      <input id="groesse" type="number" name="groesse">
+      </p>
+
+      <!--value of element value is set in script/bmi.js -->
+      <label class="bmi">
+        <value></value>
+      </label>
+
+      <!--script/bmi.js handels code when button are clicked -->
+      <p><button type="button" id="berechnen">BMI berechnen</button></p>
+      <p><button type="button" id="loeschen">Werte löschen</button></p>
+    </form>
+
+    <script src="script/bmi.js"></script>
+
+  </body>
+</html>
