@@ -1,0 +1,81 @@
+10
+
+dir
+149
+svn://tiger.local/kaska/ZHAW/CodeTemplatesUnterricht-OOP1/src/lektion10/rollenspiel
+svn://tiger.local/kaska
+
+
+
+2012-06-14T16:01:44.492248Z
+149
+kaspar
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+b34ace5e-cf94-4506-99e7-745df774c718
+
+
+
+
+
+
+0
+
+Spiel.java
+file
+
+
+
+
+2012-06-14T11:53:04.000000Z
+45bb32db4093e3fdf1b54ff18f50c58d
+2012-06-14T16:01:44.492248Z
+149
+kaspar
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+61
+
+gegenstaende
+dir
+
+spielfiguren
+dir
+
+waffen
+dir
+
+zauber
+dir
+
