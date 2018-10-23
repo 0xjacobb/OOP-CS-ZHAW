@@ -1,26 +1,26 @@
 package randomButton;
-//
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.Random;
+
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-public class EntscheidungsKnopf extends Application {
+public class RandomButtonAdvanced extends Application {
+	List<String> answers = Arrays.asList("Kino","Konzert","Essen gehen");
+	
 	public void start(Stage primaryStage) {
-		Label l1 = new Label("Hallo"); 
-		Label l2 = new Label("Welt"); 
 		VBox root = new VBox(); 
-		root.getChildren().add(l1); 
-		root.getChildren().add(l2);
 		root.getChildren().add(createButton());
-		root.getChildren().add(createButtonLambda());
 			
 		Scene scene = new Scene(root, 500, 500); 
 		primaryStage.setScene(scene); 
@@ -30,35 +30,25 @@ public class EntscheidungsKnopf extends Application {
 	
 	Pane createButton() {
 		final Button btn = new Button();
-		btn.setText("Add 'Hello World' Label");
+		btn.setText("Was machen wir heute Abend?");
 		final FlowPane pane = new FlowPane();
 		pane.setPadding(new Insets(7, 7, 7, 7));
 		pane.getChildren().add(btn);
-		// ActionHandler registrieren
 			btn.setOnAction(new EventHandler<ActionEvent>() {
 				@Override
 				public void handle(ActionEvent event) {
-				pane.getChildren().add(
-				new Label("- Hello World! -"));
+					btn.setText(giveNewAnswer());
 				}
 			});
 		return pane;
 	}
 	
-	Pane createButtonLambda() {
-		final Button btn = new Button();
-		btn.setText("Add 'Hello World' Label");
-		final FlowPane pane = new FlowPane();
-		pane.setPadding(new Insets(7, 7, 7, 7));
-		pane.getChildren().add(btn);
-			// ActionHandler registrieren
-			btn.setOnAction(event -> pane.getChildren()
-			.add(new Label("- Hello World! -"))
-			);
-		return pane;
+	public String giveNewAnswer() {
+		Random randomInt= new Random();
+		return answers.get(randomInt.nextInt(answers.size()));
+		
 	}
 	
-//
 	public static void main(String[] args) {
 			launch(args);
 		}
