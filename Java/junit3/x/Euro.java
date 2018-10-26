@@ -12,8 +12,7 @@ public class Euro {
 	}
 	
 	public void add (Euro euro){
-		if (euro.getAmount() <0) 
-			throw new IllegalArgumentException(); 
+		if (euro.getAmount() <0) throw new IllegalArgumentException(); 
 		this.amount += euro.getAmount();
 	} 
 }
