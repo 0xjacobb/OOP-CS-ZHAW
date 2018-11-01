@@ -9,19 +9,45 @@ class TestTelefonbuch {
 	@Test
 	void testAddEntry() {
 		Telefonbuch test = new Telefonbuch();
-		test.addEntry("Marc", "1");
-		assertTrue("", test.name == "Marc");
+		try {
+			test.addEntry("Marc", "1");
+			assertTrue("", test.name == "Marc");
+		}
+		catch (NotValidEntryException e) {
+			System.out.println(e.toString());
+		}
 		
-		test.addEntry("Stefan", "2");
-		assertTrue("", test.name == "Stefan");
+		
+		try {
+			test.addEntry("Stefan", "2");
+			assertTrue("", test.name == "Stefan");
+		}
+		catch (NotValidEntryException e) {
+			System.out.println(e.toString());
+		}
 		
 	}
 	
 	@Test
 	void testPrintTelBuch() {
 		Telefonbuch test = new Telefonbuch();
-		test.addEntry("Marc", "1");
-		test.addEntry("Stefan", "2");
+		try {
+			test.addEntry("Marc", "1");
+			assertTrue("", test.name == "Marc");
+		}
+		catch (NotValidEntryException e) {
+			System.out.println(e.toString());
+		}
+		
+		
+		try {
+			test.addEntry("Stefan", "2");
+			assertTrue("", test.name == "Stefan");
+		}
+		catch (NotValidEntryException e) {
+			System.out.println(e.toString());
+		}
+		
 		test.printTelBuch();
 	}
 }
