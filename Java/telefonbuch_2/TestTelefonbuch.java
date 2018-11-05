@@ -1,8 +1,11 @@
-package telefonbuch;
+package telefonbuch_2;
 
 import static org.junit.Assert.assertTrue;
 
 import org.junit.jupiter.api.Test;
+
+import telefonbuch.NotValidEntryException;
+import telefonbuch.Telefonbuch;
 
 class TestTelefonbuch {
 
